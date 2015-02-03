@@ -26,3 +26,22 @@
 *.exe
 *.out
 *.app
+
+#OS ignore
+[Tt]humbs.db
+*.DS_Store
+
+#Visual Studio ignore
+*.opensdf
+*.sdf
+*.[Oo]bj
+*.pch
+*.vspscc
+*.vssscc
+*.suo
+*.ilk
+ipch/
+[Bb]in
+[Dd]ebug*/
+[Oo]bj/
+[Rr]elease*/
