@@ -3,7 +3,8 @@
 //     Copyright (c) Microsoft Corporation.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
-
+#ifndef SKEL_H
+#define SKEL_H
 #pragma once
 
 #include "resource.h"
@@ -108,6 +109,7 @@ private:
 	void COM_output(std::string filename);
 	void new_main_out();
 	double distance(double x1, double x2, double y1, double y2, double z1, double z2);
+	void distanceDeviationCheck(int currentFrame);
 	double Energy(EnergySkeleton en);
     EnergySkeleton EnergyPartials(COM com1, COM com2);
 
@@ -195,3 +197,5 @@ private:
     /// <param name="szMessage">message to display</param>
     void                    SetStatusMessage(WCHAR* szMessage);
 };
+
+#endif

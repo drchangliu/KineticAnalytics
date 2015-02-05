@@ -8,8 +8,6 @@
 #include <strsafe.h>
 #include "SkeletonBasics.h"
 #include "resource.h"
-#include "output.cpp"
-#include "logic.cpp"
 
 static const float g_JointThickness = 3.0f;
 static const float g_TrackedBoneThickness = 6.0f;

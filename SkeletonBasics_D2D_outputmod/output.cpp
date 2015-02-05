@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "SkeletonBasics.h"
 
+
 void CSkeletonBasics::delimited_output(std::string delimiter, std::string filename){
 	std::string outputFile;
 	time_t currenttime = time(NULL);
@@ -74,10 +75,6 @@ void CSkeletonBasics::delimited_output(std::string delimiter, std::string filena
 
 	fout << std::endl;
 
-	for (int i = 0; i < coords.size(); i++){
-	}
-
-	fout << std::endl;
 	fout.close();
 }
 
@@ -155,6 +152,9 @@ void CSkeletonBasics::COM_output(std::string filename){
 	fout << std::endl;
 
 	for (int i = 0; i < coords.size(); i++){
+
+		distanceDeviationCheck(i);
+
 		for (int j = 0; j < coords[j].size(); j++){
 			fout << coords[i][j].x << ',';
 			fout << coords[i][j].y << ',';

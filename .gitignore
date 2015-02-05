@@ -45,3 +45,7 @@ ipch/
 [Dd]ebug*/
 [Oo]bj/
 [Rr]elease*/
+
+#CSV files generated to be ignored
+*.csv*
+csv*

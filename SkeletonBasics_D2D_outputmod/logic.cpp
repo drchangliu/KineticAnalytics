@@ -1,6 +1,30 @@
 #include "stdafx.h"
 #include "SkeletonBasics.h"
 
+void CSkeletonBasics::distanceDeviationCheck(int currentFrame){
+	for (int currentJoint = 0; currentJoint < coords[currentFrame].size(); currentJoint++){
+		if ((abs(coords[currentFrame][currentJoint].x - coords[currentFrame][currentJoint - 1].x))
+			+ (abs(coords[currentFrame][currentJoint].y - coords[currentFrame][currentJoint - 1].y))
+			+ (abs(coords[currentFrame][currentJoint].z - coords[currentFrame][currentJoint - 1].z)) < 2){
+
+			if ((abs(coords[currentFrame][currentJoint + 1].x - coords[currentFrame][currentJoint].x))
+				+ (abs(coords[currentFrame][currentJoint + 1].y - coords[currentFrame][currentJoint].y))
+				+ (abs(coords[currentFrame][currentJoint + 1].z - coords[currentFrame][currentJoint].z)) < 2){
+
+				coords[currentFrame][currentJoint].x = coords[currentFrame][currentJoint - 1].x;
+				coords[currentFrame][currentJoint].y = coords[currentFrame][currentJoint - 1].y;
+				coords[currentFrame][currentJoint].z = coords[currentFrame][currentJoint - 1].z;
+			}
+			else{
+				coords[currentFrame][currentJoint].x = (coords[currentFrame][currentJoint - 1].x + coords[currentFrame][currentJoint + 1].x) / 2;
+				coords[currentFrame][currentJoint].y = (coords[currentFrame][currentJoint - 1].y + coords[currentFrame][currentJoint + 1].x) / 2;
+				coords[currentFrame][currentJoint].z = (coords[currentFrame][currentJoint - 1].z + coords[currentFrame][currentJoint + 1].x) / 2;
+			}
+		}
+		}
+
+	}
+
 double CSkeletonBasics::distance(double x1, double x2, double y1, double y2, double z1, double z2){
 	double xsq, ysq, zsq;
 	xsq = pow((x1 - x2), 2);
