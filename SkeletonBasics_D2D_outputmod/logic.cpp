@@ -17,8 +17,8 @@ void CSkeletonBasics::distanceDeviationCheck(int currentFrame){
 			}
 			else{
 				coords[currentFrame][currentJoint].x = (coords[currentFrame][currentJoint - 1].x + coords[currentFrame][currentJoint + 1].x) / 2;
-				coords[currentFrame][currentJoint].y = (coords[currentFrame][currentJoint - 1].y + coords[currentFrame][currentJoint + 1].x) / 2;
-				coords[currentFrame][currentJoint].z = (coords[currentFrame][currentJoint - 1].z + coords[currentFrame][currentJoint + 1].x) / 2;
+				coords[currentFrame][currentJoint].y = (coords[currentFrame][currentJoint - 1].y + coords[currentFrame][currentJoint + 1].y) / 2;
+				coords[currentFrame][currentJoint].z = (coords[currentFrame][currentJoint - 1].z + coords[currentFrame][currentJoint + 1].z) / 2;
 			}
 		}
 		}
