@@ -151,11 +151,11 @@ void CSkeletonBasics::COM_output(std::string filename){
 
 	fout << std::endl;
 
-	for (int i = 0; i < coords.size(); i++){
+	for (int i = 0; i < coords.size() - 1; i++){
 
 		distanceDeviationCheck(i);
 
-		for (int j = 0; j < coords[j].size(); j++){
+		for (int j = 0; j < coords[j].size() - 1; j++){
 			fout << coords[i][j].x << ',';
 			fout << coords[i][j].y << ',';
 			fout << coords[i][j].z << ',';
@@ -239,8 +239,8 @@ void CSkeletonBasics::playback_output(std::string filename){
 
 	outputFile += ".txt";
 	CSkeletonBasics::fout.open(outputFile);
-	for (int i = 0; i < coords.size(); i++){
-		for (int j = 0; j < coords[i].size(); j++){
+	for (int i = 0; i < coords.size() - 1; i++){
+		for (int j = 0; j < coords[i].size() - 1; j++){
 			fout << coords[i][j].x << std::endl;
 			fout << coords[i][j].y << std::endl;
 			fout << coords[i][j].z << std::endl;
