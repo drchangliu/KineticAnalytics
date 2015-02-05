@@ -151,11 +151,11 @@ void CSkeletonBasics::COM_output(std::string filename){
 
 	fout << std::endl;
 
-	for (int i = 0; i < coords.size(); i++){
+	for (int i = 0; i < coords.size() - 1; i++){
 
 		distanceDeviationCheck(i);
 
-		for (int j = 0; j < coords[j].size(); j++){
+		for (int j = 0; j < coords[j].size() - 1; j++){
 			fout << coords[i][j].x << ',';
 			fout << coords[i][j].y << ',';
 			fout << coords[i][j].z << ',';
