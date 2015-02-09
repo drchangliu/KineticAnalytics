@@ -57,7 +57,7 @@ CSkeletonBasics::CSkeletonBasics() :
     m_pNuiSensor(NULL)
 {
     ZeroMemory(m_Points,sizeof(m_Points));
-	Load_Data("playback_log_Wed_Dec_10_06_56_19_2014.txt");
+	Load_Data("playback_log_Sun_Feb_08_21_44_36_2015.txt");
 	S = 0;
 	playing = true;
 }

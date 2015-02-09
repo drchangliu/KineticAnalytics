@@ -3,27 +3,40 @@
 
 void CSkeletonBasics::distanceDeviationCheck(int currentFrame){
 	for (int currentJoint = 0; currentJoint < coords[currentFrame].size(); currentJoint++){
-		if ((abs(coords[currentFrame][currentJoint].x - coords[currentFrame][currentJoint - 1].x))
-			+ (abs(coords[currentFrame][currentJoint].y - coords[currentFrame][currentJoint - 1].y))
-			+ (abs(coords[currentFrame][currentJoint].z - coords[currentFrame][currentJoint - 1].z)) < 2){
-
-			if ((abs(coords[currentFrame][currentJoint + 1].x - coords[currentFrame][currentJoint].x))
-				+ (abs(coords[currentFrame][currentJoint + 1].y - coords[currentFrame][currentJoint].y))
-				+ (abs(coords[currentFrame][currentJoint + 1].z - coords[currentFrame][currentJoint].z)) < 2){
-
-				coords[currentFrame][currentJoint].x = coords[currentFrame][currentJoint - 1].x;
-				coords[currentFrame][currentJoint].y = coords[currentFrame][currentJoint - 1].y;
-				coords[currentFrame][currentJoint].z = coords[currentFrame][currentJoint - 1].z;
-			}
-			else{
-				coords[currentFrame][currentJoint].x = (coords[currentFrame][currentJoint - 1].x + coords[currentFrame][currentJoint + 1].x) / 2;
-				coords[currentFrame][currentJoint].y = (coords[currentFrame][currentJoint - 1].y + coords[currentFrame][currentJoint + 1].y) / 2;
-				coords[currentFrame][currentJoint].z = (coords[currentFrame][currentJoint - 1].z + coords[currentFrame][currentJoint + 1].z) / 2;
-			}
+		if ((abs(coords[currentFrame][currentJoint].x - coords[currentFrame - 1][currentJoint].x))
+			+ (abs(coords[currentFrame][currentJoint].y - coords[currentFrame - 1][currentJoint].y))
+			+ (abs(coords[currentFrame][currentJoint].z - coords[currentFrame - 1][currentJoint].z)) > 2){
+				
+			recursiveCaseDistanceDeviationCheck(currentFrame, currentJoint);
 		}
 		}
 
 	}
+
+void CSkeletonBasics::recursiveCaseDistanceDeviationCheck(int currentFrame, int currentJoint){
+	int findNextValidFrame = 1;
+	while (((abs(coords[currentFrame + findNextValidFrame][currentJoint].x - coords[currentFrame - 1][currentJoint].x))
+		+   (abs(coords[currentFrame + findNextValidFrame][currentJoint].y - coords[currentFrame - 1][currentJoint].y))
+		+   (abs(coords[currentFrame + findNextValidFrame][currentJoint].z - coords[currentFrame - 1][currentJoint].z))
+		> 2) && findNextValidFrame < (coords.size() - 1))
+				{
+					findNextValidFrame++;
+				}
+
+	for (int i = 0; i < findNextValidFrame; i++){
+
+	coords[currentFrame + i][currentJoint].x =
+		(coords[currentFrame - 1][currentJoint].x * (- i + findNextValidFrame)
+		+ (coords[currentFrame + findNextValidFrame][currentJoint].x) * findNextValidFrame) / (2* findNextValidFrame);
+	coords[currentFrame + i][currentJoint].y =
+		(coords[currentFrame - 1][currentJoint].y * (-i + findNextValidFrame)
+		+ (coords[currentFrame + findNextValidFrame][currentJoint].y) * findNextValidFrame) / (2 * findNextValidFrame);
+	coords[currentFrame + i][currentJoint].z =
+		(coords[currentFrame - 1][currentJoint].z * (-i + findNextValidFrame)
+		+ (coords[currentFrame + findNextValidFrame][currentJoint].z) * findNextValidFrame) / (2 * findNextValidFrame);
+	}
+
+}
 
 double CSkeletonBasics::distance(double x1, double x2, double y1, double y2, double z1, double z2){
 	double xsq, ysq, zsq;

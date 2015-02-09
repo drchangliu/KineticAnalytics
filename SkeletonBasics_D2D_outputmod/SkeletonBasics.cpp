@@ -83,10 +83,10 @@ CSkeletonBasics::~CSkeletonBasics()
 
 
 void CSkeletonBasics::new_main_out(){
-	playback_output("playback_log_");
 	delimited_output("\t", "kinectlog_");
 	delimited_output(",", "csvlog_");
 	COM_output("Center_of_Mass_");
+	playback_output("playback_log_");
 	std::ofstream fenout;
 	fenout.open("Energylog.txt");
 	fenout << "Total Energy is: " << FINAL_ENERGY << " Joules" << std::endl;

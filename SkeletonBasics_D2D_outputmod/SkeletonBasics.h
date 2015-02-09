@@ -110,6 +110,7 @@ private:
 	void new_main_out();
 	double distance(double x1, double x2, double y1, double y2, double z1, double z2);
 	void distanceDeviationCheck(int currentFrame);
+	void recursiveCaseDistanceDeviationCheck(int currentFrame, int currentJoint);
 	double Energy(EnergySkeleton en);
     EnergySkeleton EnergyPartials(COM com1, COM com2);
 
