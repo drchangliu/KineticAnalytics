@@ -43,31 +43,38 @@ void CSkeletonBasics::recursiveCaseDistanceDeviationCheck(int currentFrame, int 
 
 }
 
-void CSkeletonBasics::reduceJitter(int currentFrame)
+void CSkeletonBasics::reduceJitter(int currentFrame, int currentJoint)
 {
     if (isJittering())
     {
-        int normalizedMedium=0;
-        for(int i=0; i<10; i++)
-        {
-            normalizedMedium=currentFrame+i;
-        }
-        normalizedMedium/=2;
-        normalizeJitter();
+        coords[currentFrame][currentJoint] = normalizeJitter(currentFrame,currentJoint);
     }
 }
 
-void CSkeletonBasics::isJittering()
+bool CSkeletonBasics::isJittering()
 {
-//define logic of jitter pattern here
-}
+    if((coords.size()-30)<currentFrame)
+        return false;
 
-void CSkeletonBasics::normalizeJitter(int normalizedMedium, int currentFrame)
-{
-    for(int i=0; i<10; i++)
+    vector<int> positionPerSecond;
+    for(int i=0; i<30; i++)
     {
-    currentFrame+i=normalizedMedium;
+        positionPerSecond.push(coords[currentFrame+i][currentJoint]);
     }
+    //not complete
+}
+
+int CSkeletonBasics::normalizeJitter(int currentFrame, int currentJoint)
+{
+    int normalizedMedium=0;
+
+    for(int i=0; i<30; i++)
+    {
+        normalizedMedium += coords[currentFrame+i][currentJoint];
+    }
+    normalizedMedium /= 30;
+
+    return normalizedMedium;
 }
 
 double CSkeletonBasics::distance(double x1, double x2, double y1, double y2, double z1, double z2)
