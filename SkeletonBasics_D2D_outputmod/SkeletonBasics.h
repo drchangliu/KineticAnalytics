@@ -101,6 +101,7 @@ private:
     std::vector<double> currentTotalEnergyExpended;
 
 	bool recording;
+	double height;
 	double weight;
 	double FINAL_ENERGY;
 	void original_output(std::string filename);

@@ -278,6 +278,9 @@ LRESULT CALLBACK CSkeletonBasics::DlgProc(HWND hWnd, UINT message, WPARAM wParam
 			COMSES.clear();
 			//FINAL_ENERGY = 0;
 		}
+		if (IDC_BUTTON2 == LOWORD(wParam) && BN_CLICKED == HIWORD(wParam)){
+			height = IDC_EDIT1;
+		}
 
         break;
     }
