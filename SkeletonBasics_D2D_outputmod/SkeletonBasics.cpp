@@ -53,7 +53,7 @@ CSkeletonBasics::CSkeletonBasics() :
 	test=0;
 	frame_count = 0;
 	recording = false;
-	weight = 54.0; //Average Male body weight?
+	//weight = 54.0; //Average Male body weight?
 	FINAL_ENERGY = 0;
 }
 
@@ -279,7 +279,8 @@ LRESULT CALLBACK CSkeletonBasics::DlgProc(HWND hWnd, UINT message, WPARAM wParam
 			//FINAL_ENERGY = 0;
 		}
 		if (IDC_BUTTON2 == LOWORD(wParam) && BN_CLICKED == HIWORD(wParam)){
-			height = IDC_EDIT1;
+			height = IDC_FEET;
+			weight = 52 + (IDC_INCHES * 1.9);
 		}
 
         break;
