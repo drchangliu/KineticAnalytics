@@ -46,6 +46,8 @@ ipch/
 [Oo]bj/
 [Rr]elease*/
 
-#CSV files generated to be ignored
+#generated output data files to be ignored
 *.csv*
 csv*
+*2015.txt
+Energylog.txt
