@@ -56,12 +56,29 @@ bool CSkeletonBasics::isJittering(int currentFrame, int currentJoint)
     if((coords.size()-30)<currentFrame)
         return false;
 
+    bool knownGreenPoint = true;
+    positionPerSecond.push_back(coords[currentFrame][currentJoint]);
+    coord averageOfCurrent;
+
     std::vector<coord> positionPerSecond;
-    for(int i=0; i<30; i++)
+    for(int i=1; i<30; i++)
     {
-        positionPerSecond.push_back(coords[currentFrame+i][currentJoint]);
+    	    positionPerSecond.push_back(coords[currentFrame+i][currentJoint]);
+//todo: add logic for knownGreenPoint
+        if(knownGreenPoint==false){
+    		for(int j=0;j<positionPerSecond.size();j++){
+    		    	averageOfCurrent.x+=coords[currentFrame+j][currentJoint].x;
+    		    	averageOfCurrent.y+=coords[currentFrame+j][currentJoint].y;	
+    		    	averageOfCurrent.z+=coords[currentFrame+j][currentJoint].z;	
+    	     }
+    	     averageOfCurrent.x /= positionPerSecond.size();
+    	     averageOfCurrent.y /= positionPerSecond.size();
+    	     averageOfCurrent.z /= positionPerSecond.size();
+    	     coords[currentFrame+i][currentJoint]=averageOfCurrent;
+    	}
     }
-    //not complete
+    
+
 }
 
 coord CSkeletonBasics::normalizeJitter(int currentFrame, int currentJoint)
