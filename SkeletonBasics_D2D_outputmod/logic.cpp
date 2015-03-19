@@ -103,7 +103,22 @@ isJointOrScreenEdgeCollision(int currentFrame, int currentJoint)
     {
         return true;
     }
+    
+    coord current;
+    current.x=coords[currentFrame][currentJoint].x;
+    current.y=coords[currentFrame][currentJoint].y;
+    current.z=coords[currentFrame][currentJoint].z;
 
+    for(int i=0;i<coords[currentFrame].size();i++){
+    if(abs ( (current.x-coords[currentFrame][i].x) *
+             (current.x-coords[currentFrame][i].x) *
+             (current.z-coords[currentFrame][i].z) ) <.001)
+        return true;
+        
+    }
+    
+    
+    
     return false;
 }
 
