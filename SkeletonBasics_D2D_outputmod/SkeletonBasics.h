@@ -12,6 +12,7 @@
 #include <fstream>
 #include <vector>
 #include <ctime>
+#include <omp.h>
 struct coord{
 	double x;
 	double y;

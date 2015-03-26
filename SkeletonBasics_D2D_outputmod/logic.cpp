@@ -1,8 +1,11 @@
+#ifndef LOGIC
+#define LOGIC
 #include "stdafx.h"
 #include "SkeletonBasics.h"
 
 void CSkeletonBasics::distanceDeviationCheck(int currentFrame)
 {
+#pragma omp parallel for
     for (int currentJoint = 0; currentJoint < coords[currentFrame].size(); currentJoint++)
     {
         if ((abs(coords[currentFrame][currentJoint].x - coords[currentFrame - 1][currentJoint].x))
@@ -277,3 +280,4 @@ double CSkeletonBasics::Energy(EnergySkeleton en)
                   en.LEFT_LOWER_LEG_ENERGY;
     return temp;
 }
+#endif

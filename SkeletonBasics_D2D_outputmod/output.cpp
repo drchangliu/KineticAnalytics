@@ -1,3 +1,5 @@
+#ifndef OUTPUT
+#define OUTPUT
 #include "stdafx.h"
 #include "SkeletonBasics.h"
 
@@ -261,3 +263,4 @@ void CSkeletonBasics::playback_output(std::string filename){
 		}
 	}
 }
+#endif
