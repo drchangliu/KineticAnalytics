@@ -1,6 +1,19 @@
 #include "stdafx.h"
 #include "SkeletonBasics.h"
 
+void CSkeletonBasics::Load_Data(std::string filename){
+	fin.open(filename.c_str());
+	while (!fin.eof()){
+		NUI_SKELETON_FRAME temp;
+		for (int i = 0; i < NUI_SKELETON_POSITION_COUNT; i++){
+			fin >> temp.SkeletonData->SkeletonPositions[i].x;
+			fin >> temp.SkeletonData->SkeletonPositions[i].y;
+			fin >> temp.SkeletonData->SkeletonPositions[i].z;
+		}
+		Skeleton_Stack.push_back(temp);
+	}
+
+}
 
 void CSkeletonBasics::delimited_output(std::string delimiter, std::string filename){
 	std::string outputFile;

@@ -92,6 +92,7 @@ public:
     int                     Run(HINSTANCE hInstance, int nCmdShow);
 
 private:
+	std::ifstream fin;
 	std::ofstream fout;
 	size_t frame_count;
 	int test;
@@ -99,12 +100,14 @@ private:
 	std::vector<COM> COMSES;
     std::vector<EnergySkeleton> energyskels;
     std::vector<double> currentTotalEnergyExpended;
+	std::vector < NUI_SKELETON_FRAME > Skeleton_Stack;
 
 	bool recording;
 	double height;
 	double weight;
 	double FINAL_ENERGY;
 	void original_output(std::string filename);
+	void Load_Data(std::string filename);
 	//coord normalizeJitter(int currentFrame, int currentJoint);
 	//void reduceJitter(int currentFrame, int currentJoint);
 	//bool isJittering(int currentFrame, int currentJoint);
