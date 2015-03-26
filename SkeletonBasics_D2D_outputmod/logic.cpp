@@ -43,7 +43,7 @@ void CSkeletonBasics::recursiveCaseDistanceDeviationCheck(int currentFrame, int 
 
 }
 
-void CSkeletonBasics::reduceJitter(int currentFrame, int currentJoint)
+/*void CSkeletonBasics::reduceJitter(int currentFrame, int currentJoint)
 {
     if (isJittering(currentFrame, currentJoint))
     {
@@ -139,7 +139,7 @@ coord CSkeletonBasics::normalizeJitter(int currentFrame, int currentJoint)
     normalizedMedium.z /= 30;
 
     return normalizedMedium;
-}
+}*/
 
 double CSkeletonBasics::distance(double x1, double x2, double y1, double y2, double z1, double z2)
 {

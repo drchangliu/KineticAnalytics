@@ -53,7 +53,7 @@ CSkeletonBasics::CSkeletonBasics() :
 	test=0;
 	frame_count = 0;
 	recording = false;
-	//weight = 54.0; //Average Male body weight?
+	weight = 54.0; //Average Male body weight?
 	FINAL_ENERGY = 0;
 }
 
@@ -112,6 +112,7 @@ int CSkeletonBasics::Run(HINSTANCE hInstance, int nCmdShow)
     wc.hCursor       = LoadCursorW(NULL, IDC_ARROW);
     wc.hIcon         = LoadIconW(hInstance, MAKEINTRESOURCE(IDI_APP));
     wc.lpfnWndProc   = DefDlgProcW;
+	wc.lpszMenuName  = MAKEINTRESOURCE(IDR_MENU1);
     wc.lpszClassName = L"SkeletonBasicsAppDlgWndClass";
 
     if (!RegisterClassW(&wc))
