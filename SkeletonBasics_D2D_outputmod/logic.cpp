@@ -45,7 +45,7 @@ void CSkeletonBasics::recursiveCaseDistanceDeviationCheck(int currentFrame, int 
 
 void CSkeletonBasics::reduceJitter(int currentFrame, int currentJoint)
 {
-	if (isJittering(currentFrame, currentJoint))
+    if (isJittering(currentFrame, currentJoint))
     {
         coords[currentFrame][currentJoint] = normalizeJitter(currentFrame,currentJoint);
     }
@@ -56,29 +56,87 @@ bool CSkeletonBasics::isJittering(int currentFrame, int currentJoint)
     if((coords.size()-30)<currentFrame)
         return false;
 
+    bool knownGreenPoint = true;
+    positionPerSecond.push_back(coords[currentFrame][currentJoint]);
+    coord averageOfCurrent;
+
     std::vector<coord> positionPerSecond;
-    for(int i=0; i<30; i++)
+    for(int i=1; i<30; i++)
     {
         positionPerSecond.push_back(coords[currentFrame+i][currentJoint]);
+
+        knownGreenPoint = isJointOrScreenEdgeCollision(currentFrame + i, currentJoint);
+
+        if(knownGreenPoint==false)
+        {
+            for(int j=0; j<positionPerSecond.size(); j++)
+            {
+                averageOfCurrent.x+=coords[currentFrame+j][currentJoint].x;
+                averageOfCurrent.y+=coords[currentFrame+j][currentJoint].y;
+                averageOfCurrent.z+=coords[currentFrame+j][currentJoint].z;
+            }
+            averageOfCurrent.x /= positionPerSecond.size();
+            averageOfCurrent.y /= positionPerSecond.size();
+            averageOfCurrent.z /= positionPerSecond.size();
+            coords[currentFrame+i][currentJoint]=averageOfCurrent;
+        }
     }
-    //not complete
+
+
+}
+
+isJointOrScreenEdgeCollision(int currentFrame, int currentJoint)
+{
+    int greatestX=-0.2;
+    int leastX=3;
+    int greatestY=-0.2;
+    int leastY=3;
+    int greatestZ=-0.2;
+    int leastZ=3;
+
+    if( coords[currentFrame][currentJoint].x>greatestX ||
+        coords[currentFrame][currentJoint].x<leastX    ||
+        coords[currentFrame][currentJoint].y>greatestY ||
+        coords[currentFrame][currentJoint].y<leastY    ||
+        coords[currentFrame][currentJoint].z>greatestZ ||
+        coords[currentFrame][currentJoint].z<leastZ    || )
+    {
+        return true;
+    }
+    
+    coord current;
+    current.x=coords[currentFrame][currentJoint].x;
+    current.y=coords[currentFrame][currentJoint].y;
+    current.z=coords[currentFrame][currentJoint].z;
+
+    for(int i=0;i<coords[currentFrame].size();i++){
+    if(abs ( (current.x-coords[currentFrame][i].x) *
+             (current.x-coords[currentFrame][i].x) *
+             (current.z-coords[currentFrame][i].z) ) <.001)
+        return true;
+        
+    }
+    
+    
+    
+    return false;
 }
 
 coord CSkeletonBasics::normalizeJitter(int currentFrame, int currentJoint)
 {
     coord normalizedMedium;
-	normalizedMedium.x = normalizedMedium.y = normalizedMedium.z = 0;
+    normalizedMedium.x = normalizedMedium.y = normalizedMedium.z = 0;
 
 
     for(int i=0; i<30; i++)
     {
-		normalizedMedium.x += coords[currentFrame + i][currentJoint].x;
-		normalizedMedium.y += coords[currentFrame + i][currentJoint].y;
-		normalizedMedium.z += coords[currentFrame + i][currentJoint].z;
+        normalizedMedium.x += coords[currentFrame + i][currentJoint].x;
+        normalizedMedium.y += coords[currentFrame + i][currentJoint].y;
+        normalizedMedium.z += coords[currentFrame + i][currentJoint].z;
     }
     normalizedMedium.x /= 30;
-	normalizedMedium.y /= 30;
-	normalizedMedium.z /= 30;
+    normalizedMedium.y /= 30;
+    normalizedMedium.z /= 30;
 
     return normalizedMedium;
 }
