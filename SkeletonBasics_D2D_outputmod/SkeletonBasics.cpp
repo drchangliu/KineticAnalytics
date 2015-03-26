@@ -8,7 +8,7 @@
 #include <strsafe.h>
 #include "SkeletonBasics.h"
 #include "resource.h"
-
+#include "logic.cpp"
 static const float g_JointThickness = 3.0f;
 static const float g_TrackedBoneThickness = 6.0f;
 static const float g_InferredBoneThickness = 1.0f;
@@ -83,6 +83,14 @@ CSkeletonBasics::~CSkeletonBasics()
 
 
 void CSkeletonBasics::new_main_out(){
+	delimited_output("\t", "RAW_kinectlog_");
+	delimited_output(",", "RAW_csvlog_");
+	COM_output("RAW_Center_of_Mass_");
+	playback_output("RAW_playback_log_");
+	for (int i = 0; i < coords.size() - 1; i++){
+		if(i>0 && i < (coords.size() - 1))
+			distanceDeviationCheck(i);
+}
 	delimited_output("\t", "kinectlog_");
 	delimited_output(",", "csvlog_");
 	COM_output("Center_of_Mass_");

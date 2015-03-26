@@ -166,8 +166,8 @@ void CSkeletonBasics::COM_output(std::string filename){
 
 	for (int i = 0; i < coords.size() - 1; i++){
 
-		if (i>0 && i<	(coords.size()-1))
-			distanceDeviationCheck(i);
+		/*if (i>0 && i<	(coords.size()-1))
+			distanceDeviationCheck(i);*/
 
 		for (int j = 0; j < coords[j].size() - 1; j++){
 			fout << coords[i][j].x << ',';
