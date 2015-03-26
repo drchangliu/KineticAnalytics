@@ -105,9 +105,9 @@ private:
 	double weight;
 	double FINAL_ENERGY;
 	void original_output(std::string filename);
-	coord normalizeJitter(int currentFrame, int currentJoint);
-	void reduceJitter(int currentFrame, int currentJoint);
-	bool isJittering(int currentFrame, int currentJoint);
+	//coord normalizeJitter(int currentFrame, int currentJoint);
+	//void reduceJitter(int currentFrame, int currentJoint);
+	//bool isJittering(int currentFrame, int currentJoint);
 	void delimited_output(std::string delimiter, std::string filename);
 	void playback_output(std::string filename);
 	void COM_output(std::string filename);
