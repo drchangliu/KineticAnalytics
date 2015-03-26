@@ -85,7 +85,7 @@ bool CSkeletonBasics::isJittering(int currentFrame, int currentJoint)
 
 }
 
-isJointOrScreenEdgeCollision(int currentFrame, int currentJoint)
+bool CSkeletonBasics::isJointOrScreenEdgeCollision(int currentFrame, int currentJoint)
 {
     int greatestX=-0.2;
     int leastX=3;
@@ -103,7 +103,7 @@ isJointOrScreenEdgeCollision(int currentFrame, int currentJoint)
     {
         return true;
     }
-    
+
     coord current;
     current.x=coords[currentFrame][currentJoint].x;
     current.y=coords[currentFrame][currentJoint].y;
@@ -114,11 +114,11 @@ isJointOrScreenEdgeCollision(int currentFrame, int currentJoint)
              (current.x-coords[currentFrame][i].x) *
              (current.z-coords[currentFrame][i].z) ) <.001)
         return true;
-        
+
     }
-    
-    
-    
+
+
+
     return false;
 }
 

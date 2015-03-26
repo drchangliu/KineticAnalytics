@@ -201,6 +201,13 @@ private:
     /// </summary>
     /// <param name="szMessage">message to display</param>
     void                    SetStatusMessage(WCHAR* szMessage);
+
+    // jitter
+    void reduceJitter(int currentFrame, int currentJoint);
+    bool isJittering(int currentFrame, int currentJoint);
+    bool isJointOrScreenEdgeCollision(int currentFrame, int currentJoint);
+    coord normalizeJitter(int currentFrame, int currentJoint);
+
 };
 
 #endif
