@@ -280,8 +280,7 @@ LRESULT CALLBACK CSkeletonBasics::DlgProc(HWND hWnd, UINT message, WPARAM wParam
 			//FINAL_ENERGY = 0;
 		}
 		if (IDC_BUTTON2 == LOWORD(wParam) && BN_CLICKED == HIWORD(wParam)){
-			height = IDC_FEET;
-			weight = 52 + (IDC_INCHES * 1.9);
+			weight = IDC_WEIGHT;
 		}
 
         break;
