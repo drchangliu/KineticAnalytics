@@ -80,6 +80,12 @@
     <IetfLanguageTag>es</IetfLanguageTag>
     <ColumnNumber>1</ColumnNumber>
   </Languages>
+  <Languages>
+    <LanguageID>12</LanguageID>
+    <LanguageName>French</LanguageName>
+    <IetfLanguageTag>fr</IetfLanguageTag>
+    <ColumnNumber>2</ColumnNumber>
+  </Languages>
   <GeneralTexts>
     <StringID>128</StringID>
     <LanguageID>1033</LanguageID>
@@ -284,6 +290,108 @@
     <LanguageText>Idioma</LanguageText>
     <Status>5</Status>
   </GeneralTexts>
+  <GeneralTexts>
+    <StringID>139</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Edition</LanguageText>
+    <Status>3</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>138</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Ouvrir</LanguageText>
+    <Status>3</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>137</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>fichier</LanguageText>
+    <Status>3</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>140</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Options</LanguageText>
+    <Status>3</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>128</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Squelettes Basics</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>131</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Enregistrement</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>136</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Confirmer</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>132</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Arrêt et Save</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>130</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Assis</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>133</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Entrez la hauteur :</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>129</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Cliquez sur « Assis » pour changer le type du pipeline squelettique !</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>134</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Pieds</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>135</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Pouces</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>142</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Anglais</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>144</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Français</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>143</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Espagnol</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
+  <GeneralTexts>
+    <StringID>141</StringID>
+    <LanguageID>12</LanguageID>
+    <LanguageText>Langue</LanguageText>
+    <Status>5</Status>
+  </GeneralTexts>
   <Properties>
     <Component>IDD_APP</Component>
     <Name>IDD_APP.CAPTION</Name>
@@ -422,7 +530,7 @@
   </Properties>
   <GeneralAttributes>
     <Name>StatusHash</Name>
-    <TextValue>eIk4IYDEFqGv3KTBAWw05kKINQ4=</TextValue>
+    <TextValue>NlDgdi3bs8eH/yR0iraOFnMd4Is=</TextValue>
     <NumValue>0</NumValue>
   </GeneralAttributes>
   <GeneralAttributes>
@@ -472,8 +580,8 @@
   </GeneralAttributes>
   <GeneralAttributes>
     <Name>ScanInitializeComponents</Name>
-    <TextValue>False</TextValue>
-    <NumValue>0</NumValue>
+    <TextValue>True</TextValue>
+    <NumValue>1</NumValue>
   </GeneralAttributes>
   <GeneralAttributes>
     <Name>HandleCppCliAsManaged</Name>

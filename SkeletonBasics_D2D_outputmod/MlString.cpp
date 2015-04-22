@@ -4,7 +4,7 @@
 namespace MultiLang
 {
   LCID  LocaleId ;
-  const TCHAR*  SupportedCultures[] = { _T("en-US"), _T("es") } ; //MLHIDE
+  const TCHAR*  SupportedCultures[] = { _T("es"), _T("en-US"), _T("fr") } ; //MLHIDE
   const int     NumberOfCultures = sizeof SupportedCultures / sizeof SupportedCultures[0] ;
   const TCHAR*  RootNamespace = _T("SkeletonBasics") ;       //MLHIDE
 

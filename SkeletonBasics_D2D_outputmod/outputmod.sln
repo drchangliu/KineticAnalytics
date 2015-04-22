@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "outputmod", "SkeletonBasics
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkeletonBasics-D2D_es", "SkeletonBasics-D2D_es\SkeletonBasics-D2D_es.vcxproj", "{DDE8EB61-5C84-40AC-8A53-8E8AF9364256}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkeletonBasics-D2D_fr", "SkeletonBasics-D2D_fr\SkeletonBasics-D2D_fr.vcxproj", "{FA85BEA6-AA82-4B38-9568-3215EFAA7028}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -29,6 +31,12 @@ Global
 		{DDE8EB61-5C84-40AC-8A53-8E8AF9364256}.Release|Win32.ActiveCfg = Release|Win32
 		{DDE8EB61-5C84-40AC-8A53-8E8AF9364256}.Release|Win32.Build.0 = Release|Win32
 		{DDE8EB61-5C84-40AC-8A53-8E8AF9364256}.Release|x64.ActiveCfg = Release|Win32
+		{FA85BEA6-AA82-4B38-9568-3215EFAA7028}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FA85BEA6-AA82-4B38-9568-3215EFAA7028}.Debug|Win32.Build.0 = Debug|Win32
+		{FA85BEA6-AA82-4B38-9568-3215EFAA7028}.Debug|x64.ActiveCfg = Debug|Win32
+		{FA85BEA6-AA82-4B38-9568-3215EFAA7028}.Release|Win32.ActiveCfg = Release|Win32
+		{FA85BEA6-AA82-4B38-9568-3215EFAA7028}.Release|Win32.Build.0 = Release|Win32
+		{FA85BEA6-AA82-4B38-9568-3215EFAA7028}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
