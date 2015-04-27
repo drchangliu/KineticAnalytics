@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "SkeletonBasics.h"
 
 void CSkeletonBasics::distanceDeviationCheck(int currentFrame)
 {

@@ -1,0 +1,303 @@
+<?xml version="1.0" standalone="yes"?>
+<ControlsScanResultsCache xmlns="http://tempuri.org/ControlsScanResults.xsd">
+  <ControlsScanResults>
+    <ControlsScanID>1</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP</FullName>
+    <ShortName>IDD_APP</ShortName>
+    <XPath />
+    <ProgID>IDD_APP</ProgID>
+    <OriginalText />
+    <SortKey>IDD_APP</SortKey>
+    <NodeType>0</NodeType>
+    <Expanded>true</Expanded>
+    <ItemLevel>0</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>2</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.CAPTION</FullName>
+    <ShortName>CAPTION</ShortName>
+    <XPath />
+    <ProgID>CAPTION</ProgID>
+    <OriginalText>Skeleton Basics</OriginalText>
+    <SortKey>ACAPTION</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>3</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_BUTTON1</FullName>
+    <ShortName>IDC_BUTTON1</ShortName>
+    <XPath />
+    <ProgID>PUSHBUTTON</ProgID>
+    <OriginalText>Record</OriginalText>
+    <SortKey>BIDC_BUTTON1</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>4</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_BUTTON2</FullName>
+    <ShortName>IDC_BUTTON2</ShortName>
+    <XPath />
+    <ProgID>PUSHBUTTON</ProgID>
+    <OriginalText>Confirm</OriginalText>
+    <SortKey>BIDC_BUTTON2</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>5</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_BUTTON3</FullName>
+    <ShortName>IDC_BUTTON3</ShortName>
+    <XPath />
+    <ProgID>PUSHBUTTON</ProgID>
+    <OriginalText>Stop and Save</OriginalText>
+    <SortKey>BIDC_BUTTON3</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>6</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_CHECK_SEATED</FullName>
+    <ShortName>IDC_CHECK_SEATED</ShortName>
+    <XPath />
+    <ProgID>CONTROL</ProgID>
+    <OriginalText>Seated</OriginalText>
+    <SortKey>BIDC_CHECK_SEATED</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>7</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_ENTER_HEIGHT</FullName>
+    <ShortName>IDC_ENTER_HEIGHT</ShortName>
+    <XPath />
+    <ProgID>LTEXT</ProgID>
+    <OriginalText>Enter Height:</OriginalText>
+    <SortKey>BIDC_ENTER_HEIGHT</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>8</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_STATUS</FullName>
+    <ShortName>IDC_STATUS</ShortName>
+    <XPath />
+    <ProgID>LTEXT</ProgID>
+    <OriginalText>Click 'Seated' to change skeletal pipeline type!</OriginalText>
+    <SortKey>BIDC_STATUS</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>9</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_TEXT_FEET</FullName>
+    <ShortName>IDC_TEXT_FEET</ShortName>
+    <XPath />
+    <ProgID>LTEXT</ProgID>
+    <OriginalText>Feet</OriginalText>
+    <SortKey>BIDC_TEXT_FEET</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>10</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_TEXT_INCHES</FullName>
+    <ShortName>IDC_TEXT_INCHES</ShortName>
+    <XPath />
+    <ProgID>LTEXT</ProgID>
+    <OriginalText>Inches</OriginalText>
+    <SortKey>BIDC_TEXT_INCHES</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>11</ControlsScanID>
+    <Component>IDD_APP</Component>
+    <FullName>IDD_APP.IDC_VIDEOVIEW</FullName>
+    <ShortName>IDC_VIDEOVIEW</ShortName>
+    <XPath />
+    <ProgID>CONTROL</ProgID>
+    <OriginalText />
+    <SortKey>BIDC_VIDEOVIEW</SortKey>
+    <NodeType>8707</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>12</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1</FullName>
+    <ShortName>IDR_MENU1</ShortName>
+    <XPath />
+    <ProgID>IDR_MENU1</ProgID>
+    <OriginalText />
+    <SortKey>IDR_MENU1</SortKey>
+    <NodeType>0</NodeType>
+    <Expanded>true</Expanded>
+    <ItemLevel>0</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>13</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1.0</FullName>
+    <ShortName>0</ShortName>
+    <XPath />
+    <ProgID>MENUITEM</ProgID>
+    <OriginalText>Edit</OriginalText>
+    <SortKey>B0</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>14</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1.Popup.1</FullName>
+    <ShortName>Popup.1</ShortName>
+    <XPath />
+    <ProgID>POPUP</ProgID>
+    <OriginalText>File</OriginalText>
+    <SortKey>BPopup.1</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>15</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1.1.ID_FILE_OPEN</FullName>
+    <ShortName>1.ID_FILE_OPEN</ShortName>
+    <XPath />
+    <ProgID>MENUITEM</ProgID>
+    <OriginalText>Open</OriginalText>
+    <SortKey>B1.ID_FILE_OPEN</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>2</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>16</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1.Popup.2</FullName>
+    <ShortName>Popup.2</ShortName>
+    <XPath />
+    <ProgID>POPUP</ProgID>
+    <OriginalText>Options</OriginalText>
+    <SortKey>BPopup.2</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>1</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>17</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1.Popup.2.1</FullName>
+    <ShortName>Popup.2.1</ShortName>
+    <XPath />
+    <ProgID>POPUP</ProgID>
+    <OriginalText>Language</OriginalText>
+    <SortKey>BPopup.2.1</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>2</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>18</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1.2.1.ID_LANGUAGE_ENGLISH</FullName>
+    <ShortName>2.1.ID_LANGUAGE_ENGLISH</ShortName>
+    <XPath />
+    <ProgID>MENUITEM</ProgID>
+    <OriginalText>English</OriginalText>
+    <SortKey>B2.1.ID_LANGUAGE_ENGLISH</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>3</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>19</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1.2.1.ID_LANGUAGE_FRENCH</FullName>
+    <ShortName>2.1.ID_LANGUAGE_FRENCH</ShortName>
+    <XPath />
+    <ProgID>MENUITEM</ProgID>
+    <OriginalText>French</OriginalText>
+    <SortKey>B2.1.ID_LANGUAGE_FRENCH</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>3</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+  <ControlsScanResults>
+    <ControlsScanID>20</ControlsScanID>
+    <Component>IDR_MENU1</Component>
+    <FullName>IDR_MENU1.2.1.ID_LANGUAGE_SPANISH</FullName>
+    <ShortName>2.1.ID_LANGUAGE_SPANISH</ShortName>
+    <XPath />
+    <ProgID>MENUITEM</ProgID>
+    <OriginalText>Spanish</OriginalText>
+    <SortKey>B2.1.ID_LANGUAGE_SPANISH</SortKey>
+    <NodeType>8963</NodeType>
+    <Expanded>false</Expanded>
+    <ItemLevel>3</ItemLevel>
+    <ArrayIndexOrCount>-1</ArrayIndexOrCount>
+    <CompilerName />
+  </ControlsScanResults>
+</ControlsScanResultsCache>

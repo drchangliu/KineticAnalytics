@@ -6,8 +6,6 @@
 
 #include "stdafx.h"
 #include <strsafe.h>
-#include "SkeletonBasics.h"
-#include "resource.h"
 
 static const float g_JointThickness = 3.0f;
 static const float g_TrackedBoneThickness = 6.0f;
@@ -23,7 +21,40 @@ static const float g_InferredBoneThickness = 1.0f;
 int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
     CSkeletonBasics application;
-    application.Run(hInstance, nCmdShow);
+	HINSTANCE m_hViewDll;
+
+		int msgboxID = MessageBox(
+			NULL,
+			(LPCWSTR)L"Please select a language",
+			(LPCWSTR)L"Language Selection",
+			MB_ICONQUESTION | MB_CANCELTRYCONTINUE | MB_DEFBUTTON1
+			);
+
+		switch (msgboxID)
+		{
+		case IDCANCEL:
+			m_hViewDll = hInstance;
+			break;
+		case IDTRYAGAIN:
+			m_hViewDll = AfxLoadLibrary(L"outputmod_es.dll");
+			AfxSetResourceHandle(m_hViewDll);
+			break;
+		case IDCONTINUE:
+			m_hViewDll = AfxLoadLibrary(L"outputmod_fr.dll");
+			AfxSetResourceHandle(m_hViewDll);
+			break;
+		}
+
+	//HINSTANCE m_hViewDll = AfxLoadLibrary(L"outputmod_es.dll");
+	//if (m_hViewDll)
+	//{
+	//	CString str;
+	//	str.Format(_T("Error: Cannot find component %s"), L"outputmod_es.dll");
+	//	AfxMessageBox(str);
+	//	
+	//	//return(TRUE);
+	//}
+    application.Run(m_hViewDll, nCmdShow);
 }
 
 /// <summary>
@@ -105,6 +136,7 @@ int CSkeletonBasics::Run(HINSTANCE hInstance, int nCmdShow)
     MSG       msg = {0};
     WNDCLASS  wc  = {0};
 
+
     // Dialog custom window class
     wc.style         = CS_HREDRAW | CS_VREDRAW;
     wc.cbWndExtra    = DLGWINDOWEXTRA;
@@ -175,6 +207,11 @@ void CSkeletonBasics::Update()
     {
         return;
     }
+
+	HINSTANCE hInst = LoadLibrary(_T("outputmod_es.dll"));
+	//if (hInst != NULL) {
+	AfxSetResourceHandle(hInst);
+	//}
 
     // Wait for 0ms, just quickly test if it is time to process a skeleton
     if ( WAIT_OBJECT_0 == WaitForSingleObject(m_hNextSkeletonEvent, 0) )

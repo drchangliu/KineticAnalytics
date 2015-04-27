@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "SkeletonBasics.h"
 
 
 void CSkeletonBasics::delimited_output(std::string delimiter, std::string filename){
