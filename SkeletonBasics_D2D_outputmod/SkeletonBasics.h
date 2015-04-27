@@ -12,6 +12,8 @@
 #include <fstream>
 #include <vector>
 #include <ctime>
+
+
 struct coord{
 	double x;
 	double y;

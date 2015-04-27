@@ -11,9 +11,12 @@
 #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
 
 // Windows Header Files
-#include <windows.h>
+//#include <windows.h>
 
+#include <afxwin.h>
 #include <Shlobj.h>
+#include "SkeletonBasics.h"
+#include "resource.h"
 
 // Direct2D Header Files
 #include <d2d1.h>
