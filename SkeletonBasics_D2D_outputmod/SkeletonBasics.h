@@ -119,6 +119,7 @@ private:
 	void recursiveCaseDistanceDeviationCheck(int currentFrame, int currentJoint);
 	double Energy(EnergySkeleton en);
     EnergySkeleton EnergyPartials(COM com1, COM com2);
+	HWND hWindow;
 
 	//double singleEnergy()
 	double velocity(coord coord1, coord coord2); //returns the distance betweent the points divide by 30, our constant time interval; V= deltaP/T

@@ -162,7 +162,7 @@ int CSkeletonBasics::Run(HINSTANCE hInstance, int nCmdShow)
 
     // Show window
     ShowWindow(hWndApp, nCmdShow);
-
+	hWindow = hWndApp;
     const int eventCount = 1;
     HANDLE hEvents[eventCount];
 
@@ -317,7 +317,11 @@ LRESULT CALLBACK CSkeletonBasics::DlgProc(HWND hWnd, UINT message, WPARAM wParam
 			//FINAL_ENERGY = 0;
 		}
 		if (IDC_BUTTON2 == LOWORD(wParam) && BN_CLICKED == HIWORD(wParam)){
-			weight = IDC_WEIGHT;
+			int bufSize = 1024;
+			LPTSTR strtext = new TCHAR[bufSize];
+			GetDlgItemText(hWindow, IDC_WEIGHT, strtext, bufSize);
+			weight = _tstoi(strtext);
+			weight = weight;
 		}
 
         break;
